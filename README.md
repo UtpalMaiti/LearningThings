@@ -1,2 +1,1 @@
-# Angular2
-Angular2
+LearningThings
