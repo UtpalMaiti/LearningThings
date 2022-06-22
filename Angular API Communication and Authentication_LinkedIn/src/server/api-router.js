@@ -6,9 +6,9 @@ const checkJwt = require('express-jwt');
 function apiRouter(database) {
   const router = express.Router();
 
-  router.use(
-      checkJwt({ secret: process.env.JWT_SECRET }).unless({ path: '/api/authenticate'})
-  );
+  // router.use(
+  //     checkJwt({ secret: process.env.JWT_SECRET }).unless({ path: '/api/authenticate'})
+  // );
 
   router.use((err, req, res, next) => {
     if (err.name === 'UnauthorizedError') {
