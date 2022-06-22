@@ -10,3 +10,5 @@ ASP.NET Core Identity Authentication Management_LinkedIn'/
 aspnetcore-azure-tables-2841537_LinkedIn/
 PWA/
 ReactSPA6_ALL/
+
+Azure.Cosmos
