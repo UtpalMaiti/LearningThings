@@ -9,11 +9,14 @@ namespace EmployeeManagement.Data.Entities
     {
         public EmployeeEntity()
         {
+            PartitionKey = Guid.NewGuid().ToString();
+            RowKey = Guid.NewGuid().ToString();
         }
 
         public EmployeeEntity(string department)
         {
             PartitionKey = department;
+            RowKey = Guid.NewGuid().ToString();
         }
 
         public string FullName { get; set; }
