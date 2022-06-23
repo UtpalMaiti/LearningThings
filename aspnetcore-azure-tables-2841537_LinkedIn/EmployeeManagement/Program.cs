@@ -8,10 +8,12 @@ namespace EmployeeManagement
     {
         static void Main(string[] args)
         {
-            //Common.CreateTableAsync("Employee").GetAwaiter().GetResult();
+            Common.CreateTableAsync("Employee").GetAwaiter().GetResult();
 
             Operations dataOperations = new Operations();
             dataOperations.TriggerOperations().Wait();
+            dataOperations.TriggerOperations().GetAwaiter().GetResult();
+            dataOperations.TriggerOperations().RunSynchronously();
 
             Console.ReadKey();
         }
