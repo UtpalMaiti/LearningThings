@@ -1,5 +1,6 @@
 ﻿using EmployeeManagement.Data.Common;
 using EmployeeManagement.Data.Operations;
+
 using System;
 
 namespace EmployeeManagement
@@ -14,7 +15,14 @@ namespace EmployeeManagement
             dataOperations.TriggerOperations().Wait();
             dataOperations.TriggerOperations().GetAwaiter().GetResult();
             dataOperations.TriggerOperations().RunSynchronously();
+            dataOperations.TriggerOperations().ConfigureAwait(false);
+            //dataOperations.TriggerOperations().
+            //(dataOperations.TriggerOperations()).WaitAndUnwrapException();
+            //Task.Wait or Task.Result
+            //AsyncContext.RunTask(MyAsyncMethod).Result
 
+            //Task.Run(async () => await MyAsyncMethod());
+            //AsyncContext.Run(MyAsyncMethod);
             Console.ReadKey();
         }
     }

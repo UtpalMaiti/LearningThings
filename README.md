@@ -12,3 +12,5 @@ PWA/
 ReactSPA6_ALL/
 
 Azure.Cosmos
+
+https://dotnettutorials.net/course/csharp-dot-net-tutorials/
