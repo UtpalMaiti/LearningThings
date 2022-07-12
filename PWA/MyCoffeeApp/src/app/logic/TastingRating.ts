@@ -1,5 +1,5 @@
 export class TastingRating {
-    aroma: string;
+    aroma: number;
     body: number;
     flavor: number;
     intensity: number;
